@@ -3,14 +3,14 @@
 **La Team.** Ce projet vous est présenté par les Boyz II Code, composée de :
 
 - Dimitri Kiavue @Dimitri - BoyzIICode
-- Gino Huynh - @Gino
+- Gino Hu - @Gino
 - Pierre Tâm-Anh Le Khac @Pierre Tâm-Anh - BoyzIICode
 - William Ribeiro @wilrib - non-binaire
 
 
 ***COMMENT DEMARRER LE PROGRAMME?*** 
 
-On installe les gems tranquilou, en mode |bundle install| puis on lance la machine |ruby app.rb|
+On installe les gems tranquilou, en mode ```bundle install``` puis on lance la machine ```ruby app.rb```
 
 
 ***LE DOSSIER***

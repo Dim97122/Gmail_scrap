@@ -1,0 +1,12 @@
+source "https://rubygems.org"
+ruby '2.5.1'
+gem 'nokogiri'
+gem 'pry'
+gem 'rubocop'
+gem 'google_drive'
+gem 'csv'
+gem 'json'
+gem 'gmail'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client'
+gem 'dotenv'

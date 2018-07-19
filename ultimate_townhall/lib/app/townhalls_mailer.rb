@@ -9,7 +9,12 @@ def initialize
   wilrib = File.read('../../db/emails.json')
   db = JSON.parse(wilrib) #on va parser wilrib, pour le stocker dans la variable db
 
+  puts  "Veuillez renseigner votre adresse Gmail SVP:"
+  puts  "> "
   user = gets.chomp
+
+  puts  "Veuillez renseigner votre Mot de Passe SVP:"
+  puts  "> "
   password = gets.chomp
 
   gmail = Gmail.connect(user, password) #on se connecte à gmail avec user et mdp
@@ -19,14 +24,16 @@ def initialize
       to value[1] #on demande à la boucle de chercher la deuxième de l'array de db (à savoir l'email)
       subject "Having fun in Puerto Rico!"
       body "Bonjour,
-    Je m'appelle Gino, je suis élève à The Hacking Project, une formation au code gratuite, sans locaux, sans sélection, sans restriction géographique. La pédagogie de notre école est celle du peer-learning, où nous travaillons par petits groupes sur des projets concrets qui font apprendre le code. Le projet du jour est d'envoyer (avec du codage) des emails aux mairies pour qu'ils nous aident à faire de The Hacking Project un nouveau format d'éducation pour tous.
+            Je m'appelle Gino, je suis élève à The Hacking Project, une formation au code gratuite, sans locaux, sans sélection, sans restriction géographique. La pédagogie de notre école est celle du peer-learning, où nous travaillons par petits groupes sur des projets concrets qui font apprendre le code. Le projet du jour est d'envoyer (avec du codage) des emails aux mairies pour qu'ils nous aident à faire de The Hacking Project un nouveau format d'éducation pour tous.
 
-    Déjà 500 personnes sont passées par The Hacking Project. Est-ce que la mairie de #{key} veut changer le monde avec nous ?
+            Déjà 500 personnes sont passées par The Hacking Project. Est-ce que la mairie de #{key} veut changer le monde avec nous ?
 
-    Charles, co-fondateur de The Hacking Project pourra répondre à toutes vos questions : 06.95.46.60.80"
+            Charles, co-fondateur de The Hacking Project pourra répondre à toutes vos questions : 06.95.46.60.80"
         end   #pour automatiser les envois on met la |key| du hash db pour reliée à l'email correspondant.
 
       @email.deliver! #methode qui vient dela gem mail et qui fait voler les éléphants!!!!!!! Nan sérieux elle envoie un mail quoi ;)
       end
   end
 end
+
+Mailer.new
